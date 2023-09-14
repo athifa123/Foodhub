@@ -1,0 +1,40 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const heading = React.createElement("h1", {
+        id : "title"
+        
+} , " Namaste react with parcel ");
+        
+
+
+const heading2 = React.createElement(
+        "h2",
+        {
+                id : "title"
+
+        },
+        "Let start"
+);
+
+
+const container = React.createElement(
+        "div",
+        {
+                cid : "number1",
+                hello : "world",
+        },
+        [heading , heading2]
+
+);
+
+console.log( heading2);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(container);
+
+
+/////////////befor using jsx 
+
+
+"plugins": [ ["transform-remove-console", { "exclude": ["error", "warn"] }] ]----------from babelrcfile
