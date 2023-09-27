@@ -37,3 +37,15 @@ body {
 .restaurant-list {
     display: flex;
 }
+
+
+.shimmer-container {
+    display: flex;
+}
+
+.shimmer-card {
+    margin : 20px;
+    width : 200px;
+    height : 400px;
+    background-color: gray;
+}
