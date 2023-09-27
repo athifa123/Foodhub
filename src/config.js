@@ -4,7 +4,7 @@ export const restaurantList = [
         
     {
       "type": "restaurant",
-      "data": {
+      "info": {
         "type": "F",
         "id": "583182",
         "name": "NOTO - Healthy Ice Cream",
@@ -158,7 +158,7 @@ export const restaurantList = [
     },
     {
       "type": "restaurant",
-      "data": {
+      "info": {
         "type": "F",
         "id": "8032",
         "name": "Burger King",
@@ -308,7 +308,7 @@ export const restaurantList = [
     },
     {
       "type": "restaurant",
-      "data": {
+      "info": {
         "type": "F",
         "id": "265272",
         "name": "Hotel Empire",
@@ -459,7 +459,7 @@ export const restaurantList = [
     },
     {
       "type": "restaurant",
-      "data": {
+      "info": {
         "type": "F",
         "id": "312849",
         "name": "Chopstick",
@@ -619,7 +619,7 @@ export const restaurantList = [
     },
     {
       "type": "restaurant",
-      "data": {
+      "info": {
         "type": "F",
         "id": "434961",
         "name": "Donne Biryani @99",
