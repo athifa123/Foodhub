@@ -1,3 +1,6 @@
+ import { useState } from "react";
+import { Link } from "react-router-dom";
+ 
  export const Logo = () => {
         return(
                 <div className="logoimg">
@@ -11,15 +14,23 @@
 };
  
  const Header = () => {
+        const [btnNameReact, setbtnNameReact ]  = useState("Login");
     return (
             <div className="header-elements">
                     <Logo />
                     <div className="nav-items">
                             <ul>
-                                    <li> Home</li>
-                                    <li> About Us</li>
-                                    <li> Contact</li>
+                                    <li><Link to = '/'> Home</Link></li>
+                                    <li>  <Link to = '/about'> About Us </Link></li>
+                                    <li >  <Link to = '/contact'> Contact </Link> </li>
                                     <li> Cart</li>
+                                    <button className="Loginbtn" onClick={() => {
+                                         btnNameReact=== "Login" ? 
+                                         setbtnNameReact ("Logout")
+                                          : setbtnNameReact("Login");
+                                         
+                                          }}> {btnNameReact} </button>
+                                    
                             </ul>
                     </div>
             </div>
