@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
             <div className="header-elements">
                     <Logo />
                     <div className="nav-items">
-                            <ul>
+                            <ul> 
                                     <li><Link to = '/'> Home</Link></li>
                                     <li>  <Link to = '/about'> About Us </Link></li>
                                     <li >  <Link to = '/contact'> Contact </Link> </li>
