@@ -23,15 +23,42 @@ const Body = () => {
   }, []);
 
   async function getRestaurants() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0247291&lng=77.5947532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    try {
+      $.ajax({
+        url: "https://swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
+        method: "GET",
+        success: function(response) {
+          console.log(response); // Log the response data to the console
+          // Do whatever you need with the response data
+        },
+        error: function(xhr, status, error) {
+          console.error('Request failed with status:', status);
+        }
+      });
+       ////const data = await fetch("https://swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING", {
+        //mode: 'no-cors',
+        ////headers: {
+         // accept : "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7" ,
+          //'Access-Control-Allow-Origin':'*'
+      //  }
+     // })
+        
+     // const data = await fetch(
+      //"https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+   // );
 
-    const json = await data.json();
+   // const json = data.json();
     //console.log(json);
-    setRestaurants(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+   // setRestaurants(
+    //  json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    //);
+
+
+    }
+    catch(err) {
+      console.log(err)
+    }
+    
   }
 
   const onlineStatus = useOnlineStatus();
